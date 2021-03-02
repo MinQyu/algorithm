@@ -1,9 +1,7 @@
-﻿/*
+﻿
 #include <iostream>
 
-int main()
+void BOJ2557()
 {
     printf("Hello World!\n");
-    return 0;
 }
-*/
