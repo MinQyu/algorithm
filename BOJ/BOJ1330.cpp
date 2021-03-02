@@ -1,6 +1,7 @@
+#include "H.h"
 #include <iostream>
 using namespace std;
-int main()
+void BOJ1330()
 {
     int A, B;
     cin>>A >>B;
