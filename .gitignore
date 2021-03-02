@@ -52,3 +52,5 @@
 *.latbuildstate
 *.tlog
 *.unsuccessfulbuild
+main.cpp
+*.h
