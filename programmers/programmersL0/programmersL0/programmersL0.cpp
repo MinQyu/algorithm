@@ -5,7 +5,7 @@
 int main()
 {
     Babbling();
-    cout << "Hello World!\n";
+    Sequence();
 }
 
 
