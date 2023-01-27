@@ -28,5 +28,5 @@ int solution(vector<string> babbling) {
     return answer;
 }
 void Babbling() {
-    cout << solution(babbling) << "\n";
+    cout << solution(babbling) << endl;
 }

@@ -14,5 +14,5 @@ int solution(vector<int> common) {
 }
 
 void Sequence() {
-    cout << solution(common);
+    cout << solution(common) << endl;
 }
