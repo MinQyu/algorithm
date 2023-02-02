@@ -8,6 +8,7 @@ int main()
     totalNum();
     paperCut();
     stringShift();
+    arrayCut();
 }
 
 
