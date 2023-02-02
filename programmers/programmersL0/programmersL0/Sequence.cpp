@@ -2,7 +2,7 @@
 
 vector<int> common = { 1,2,3,4 };
 
-int solution(vector<int> common) {
+int Sequence(vector<int> common) {
     int answer = 0;
     if (common[1] - common[0] == common[2] - common[1]) {
         answer = common.back() + common[1] - common[0];
@@ -14,5 +14,5 @@ int solution(vector<int> common) {
 }
 
 void Sequence() {
-    cout << solution(common) << endl;
+    cout << Sequence(common) << endl;
 }

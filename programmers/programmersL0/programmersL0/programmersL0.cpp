@@ -9,6 +9,7 @@ int main()
     paperCut();
     stringShift();
     arrayCut();
+    numCount();
 }
 
 
