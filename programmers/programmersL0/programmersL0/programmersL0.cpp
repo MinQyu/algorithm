@@ -10,6 +10,7 @@ int main()
     stringShift();
     arrayCut();
     numCount();
+    stringSort2();
 }
 
 
