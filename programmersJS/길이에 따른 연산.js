@@ -1,15 +1,4 @@
 function solution(num_list) {
-    const len = num_list.length;
-    let answer = 0;
-    if(len >= 11){
-        for(i=0; i<len; i++){
-            answer += num_list[i];    
-        }
-    } else {
-        answer = 1;
-        for(i=0; i<len; i++){
-            answer *= num_list[i];    
-        }
-    }
+    const answer = num_list.length > 10 ? num_list.reduce((acc, cur) => acc + cur, 0) : num_list.reduce((acc, cur) => acc * cur, 1);
     return answer;
 }
