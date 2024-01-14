@@ -1,8 +1,4 @@
 function solution(rny_string) {
-    let answer = rny_string;
-    
-    while(answer.includes('m')) {
-        answer = answer.replace('m', 'rn');  
-    }
+    const answer = rny_string.replace(/m/g,'rn');
     return answer;
 }
