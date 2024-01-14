@@ -1,9 +1,4 @@
 function solution(arr, delete_list) {
-    let answer = arr;
-    for(i=0; i<delete_list.length; i++){
-        if(answer.includes(delete_list[i])){
-            answer.splice(answer.indexOf(delete_list[i]), 1);
-        }
-    }
+    const answer = arr.filter(e => delete_list.includes(e) === false);
     return answer;
 }
