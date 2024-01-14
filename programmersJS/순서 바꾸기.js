@@ -1,9 +1,6 @@
 function solution(num_list, n) {
-    let answer = num_list.slice(n, );
-    let arr = num_list.slice(0, n);
-    let len = arr.length
-    for(i=0; i<len; i++){
-        answer.push(arr.shift());
-    }
+    let arr1 = num_list.slice(n, );
+    let arr2 = num_list.slice(0, n);
+    const answer = [...arr1, ...arr2]
     return answer;
 }
