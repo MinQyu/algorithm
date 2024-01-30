@@ -1,4 +1,5 @@
 function solution(arr, delete_list) {
-    const answer = arr.filter(e => delete_list.includes(e) === false);
-    return answer;
+    const set = new Set(arr);
+    delete_list.forEach(e => set.delete(e));
+    return [...set]
 }
