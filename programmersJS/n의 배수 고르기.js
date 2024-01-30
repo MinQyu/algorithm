@@ -1,3 +1,3 @@
 function solution(n, numlist) {
-    return = numlist.filter(e => !(e % n));
+    return numlist.filter(e => !(e % n));
 }
