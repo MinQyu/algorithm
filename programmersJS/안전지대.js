@@ -14,7 +14,7 @@ function solution(board) {
     board = board.flat()
         .reduce((acc, cur, i, arr) => {
             let isSafe = cur ? 0 : 1;
-            getRange(i).forEach(e => { if (arr[e]) isSafe = 0; });
+            if(!cur) getRange(i).forEach(e => { if (arr[e]) isSafe = 0; });
             return acc + isSafe;
         }, 0);
 
