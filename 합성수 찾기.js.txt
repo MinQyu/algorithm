@@ -1,15 +1,20 @@
 function solution(n) {
     let answer = 0;
-    for(i=4; i<=n; i++){
+    const countNumOfSub = (num) => {
         const tmp = [];
-        for(j=1; j<=Math.sqrt(i); j++){
-            if(i%j === 0){
+        for (j = 1; j <= Math.sqrt(num); j++) {
+            if (num % j === 0) {
                 tmp.push(j);
-                i/j !== j ? tmp.push(i/j) : null;
+                if (num / j !== j) tmp.push(num / j);
             }
-            if(tmp.length>=3) break;
+            if (tmp.length >= 3) break;
         }
-        tmp.length>=3 ? answer+=1 : answer+=0;
+        return tmp.length;
+    };
+
+    for (i = 4; i <= n; i++) {
+        if (countNumOfSub(i) >= 3) answer++;
     }
+
     return answer;
 }
