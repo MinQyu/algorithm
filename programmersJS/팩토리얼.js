@@ -1,8 +1,10 @@
 function solution(n) {
-    let tmp = 1, i = 1;
-    while (tmp * (i + 1) <= n) {
-        i++;
-        tmp *= i;
+  const arr = Array.from({ length: 11 }, (_, i) => i + 1);
+  let acc = 1;
+  for (i = 0; i < 11; i++) {
+    acc *= arr[i];
+    if (acc > n) {
+      return i;
     }
-    return i;
+  }
 }
