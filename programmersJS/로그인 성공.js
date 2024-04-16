@@ -1,8 +1,9 @@
 function solution(id_pw, db) {
-    let state = "fail";
-    db = db.filter((e) => e[0] === id_pw[0]).flat();
-    if (db.length) {
-        state = (db[1] === id_pw[1]) ? "login" : "wrong pw";
-    }
-    return state;
+  const [id, pw] = id_pw;
+  const parsedDB = db.filter((e) => e[0] === id).flat();
+  if (parsedDB.length > 0) {
+    return parsedDB[1] === pw ? "login" : "wrong pw";
+  } else {
+    return "fail";
+  }
 }
