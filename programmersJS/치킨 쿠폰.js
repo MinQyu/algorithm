@@ -3,11 +3,11 @@ function solution(chicken) {
   const getNumberOfServiceChiken = (coupon) => parseInt(coupon / COUPON_NEED);
   let coupon = chicken;
   let maxServiceChicken = 0;
-  while (getNumberOfServiceChiken(coupon) > 0) {
-    const numberOfServiceChiken = getNumberOfServiceChiken(coupon);
-    const numberOfUsedCoupon = numberOfServiceChiken * COUPON_NEED;
-    maxServiceChicken += numberOfServiceChiken;
-    coupon = coupon - numberOfUsedCoupon + numberOfServiceChiken;
+  while (coupon >= COUPON_NEED) {
+    const NumberOfServiceChiken = getNumberOfServiceChiken(coupon);
+    maxServiceChicken += NumberOfServiceChiken;
+    coupon =
+      coupon - NumberOfServiceChiken * COUPON_NEED + NumberOfServiceChiken;
   }
   return maxServiceChicken;
 }
