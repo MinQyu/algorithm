@@ -1,16 +1,33 @@
 function solution(polynomial) {
-    let x = 0;
-    let n = 0;
-    polynomial = polynomial.split(" + ");
-    polynomial.forEach(e => {
-        if (e.includes('x')) {
-            parseInt(e) ? x += parseInt(e) : x += 1;
-        } else {
-            n += parseInt(e);
-        }
+  const polynomialArray = polynomial.split(" + ");
+  const getTermOfX = (coefficientOfX) => {
+    if (coefficientOfX) {
+      return coefficientOfX === 1 ? "x" : coefficientOfX.toString() + "x";
+    } else {
+      return "";
+    }
+  };
+  const checkPlus = (coefficientOfX, constantTerm) =>
+    coefficientOfX && constantTerm ? " + " : "";
+  const getTermOfConstant = (constantTerm) =>
+    constantTerm ? constantTerm.toString() : "";
+  const organizePolynomialArray = (polynomialArray) => {
+    let coefficientOfX = 0;
+    let constantTerm = 0;
+    polynomialArray.forEach((term) => {
+      if (term.includes("x")) {
+        coefficientOfX += parseInt(term) ? parseInt(term) : 1;
+      } else {
+        constantTerm += parseInt(term);
+      }
     });
-    const xp = x ? (x === 1 ? 'x' : x.toString() + 'x') : '';
-    const plus = x && n ? " + " : '';
-    const np = n ? n.toString() : '';
-    return xp + plus + np;
+    return [coefficientOfX, constantTerm];
+  };
+  const [coefficientOfX, constantTerm] =
+    organizePolynomialArray(polynomialArray);
+  return (
+    getTermOfX(coefficientOfX) +
+    checkPlus(coefficientOfX, constantTerm) +
+    getTermOfConstant(constantTerm)
+  );
 }
